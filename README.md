@@ -1,7 +1,8 @@
-# 可视化编程兴趣小组
+# 2021可视化编程兴趣小组
 Tutorial for Web-based Spatial Visualization Programming
-
 组织者：陆旻、吕健荣
+
+![](./recruit/2021poster.png)
 
 + 第一期：WEB编程基础 [钟雷洋 徐海]
 + 第二期：可视化及交互编程基础［吴金婧、苗菁］
@@ -12,4 +13,6 @@ Tutorial for Web-based Spatial Visualization Programming
 + 第七期：后端服务器tornado，flask学习与实践 ［李雪 晏晶晶］（李美仪，钟国熙，祝老板）
 + 第八期：后端数据库连接与使用［王梦迪、丁金格］（林玮妍，佘佳霓，黄键熙，余钊扬）
 
+### 历年兴趣小组
 
++ [2020可视化编程兴趣小组](/2020gallery.md)
