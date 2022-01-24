@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="nav-container">
+        <header>
+            <a href="#" class="logo">Min Lu</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Publication</a></li>
+                    <li><a href="#">Painting</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="social-header">
+            <ul class="stagger1">
+                <li><a href=""><img src="images/github.png" alt=""></a></li>
+                <li><a href=""><img src="images/gs.png" alt=""></a></li>
+                <li><a href=""><img src="images/sina.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="content">
+            <h1 class="">Creative &amp; Fun Visualization Research</h1>
+            <!-- <div class='meet'> -->
+            <p class="meet stagger1">Meet Min Lu</p>
+            <!-- </div> -->
+            <svg class="scroll stagger1" width="62" height="100" viewBox="0 0 62 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_0_1)">
+                <rect x="8.5" y="4.5" width="45" height="83" rx="22.5" stroke="white" stroke-width="9" shape-rendering="crispEdges"/>
+                </g>
+                <circle class="circle" cx="31" cy="30" r="16" fill="white"/>
+                <defs>
+                <filter id="filter0_d_0_1" x="0" y="0" width="62" height="100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+                </filter>
+                </defs>
+            </svg>        
+        </div>
+        <svg class="hero-design" width="749" height="756" viewBox="0 0 749 756" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="381" width="191" height="191" rx="20" fill="#B61BFF"/>
+            <rect x="376" y="380" width="191" height="191" rx="20" fill="#7F1BFF"/>
+            <rect x="558" y="189" width="191" height="191" rx="20" fill="#B61BFF" fill-opacity="0.47"/>
+            <rect y="374" width="191" height="191" rx="20" fill="#FA1BFF" fill-opacity="0.47"/>
+            <rect x="191" y="189" width="191" height="191" rx="20" fill="white"/>
+            <rect x="191" y="565" width="191" height="191" rx="20" fill="white"/>
+            <circle cx="283.5" cy="473.5" r="91.5" fill="#B8F900"/>
+            <circle cx="467.5" cy="285.5" r="94" fill="white" stroke="black"/>
+            </svg>
+    </div>
+
+    <section class='featured'>
+        <div class="left">
+            <div class="inner transition2">
+                <p class="subtitle">Featured Project</p>
+                <a href="" class='featured-title'>City Subtainable Project</a>
+                <p class='featured-desc'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, similique.</p>
+            </div> 
+        </div>
+        <img class="right transition2" src="images/feature.png" alt="feature project">
+       </section>
+
+    <section class="skills">
+        <div class="skill-container">
+            <ul>
+                <li class='transition2'>
+                    <div class="icon-container one">
+                        <img src="./images/logo-1.svg" alt="">                      
+                    </div>
+                      <p class="skill-title">Visualization</p>
+                        <p class='featured-desc skill-desc'>
+                            Visualization projects that we did. 
+                        </p>
+                </li>
+
+
+                <li class='transition2'>
+                    <div class="icon-container one">
+                        <img src="./images/logo-1.svg" alt="">
+                    </div>
+                        <p class="skill-title">Visualization</p>
+                        <p class='featured-desc skill-desc'>
+                            Visualization projects that we did. 
+                        </p>
+                </li>
+
+
+                <li class='transition2'>
+                    <div class="icon-container one">
+                        <img src="./images/logo-1.svg" alt="">
+                    </div>
+
+                        <p class="skill-title">Visualization</p>
+                        <p class='featured-desc skill-desc'>
+                            Visualization projects that we did. 
+                        </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="portfolio-container transition3">
+            <div class="inner">
+                <p class='subtitle'>Infographics Project</p>
+                <p class='featured-title'>VIFInfo</p>
+                <p class="featured-desc"></p>               
+                
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.5/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+        var t1 = gsap.timeline()
+        t1.from('.content', {
+            y: '-30%',
+            opacity: 0,
+            duration: 2,
+            easing: Power4.easeOut
+        })
+
+        t1.from(".stagger1", {
+            opacity: 0,
+            y: -50,
+            stagger: .3,
+            easing: Power4.easeOut,
+            duration: 2
+        }, "-=1.5")
+
+        t1.from('.hero-design', {
+            opacity: 0,
+            y: 50,
+            ease: Power4.easeOut,
+            duration: 1
+        }, "-=2")
+    </script>
+</body>
+</html>
