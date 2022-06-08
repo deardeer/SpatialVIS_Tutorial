@@ -1,0 +1,35 @@
+<!-- exmaple1.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>会变色的小方块</title>
+  </head>
+  <body>
+      <h1>会变色的小方块</h1>
+      <svg with=400 height=400>
+          <rect onclick="clickme(this)" onmouseenter="enter(this)" onmouseout = "out(this)" 
+          style="width:100; height: 100; x: 100; y: 100; fill: green"></rect>
+      </svg>
+  </body>
+
+  <script type="text/javascript"> 
+    function clickme(item){
+        console.log('click me', item)
+        if(item.style['fill'] == 'red')
+            item.style['fill'] = 'green'
+        else
+            item.style['fill'] = 'red'        
+    }
+    function enter(item){
+        console.log('mouse enter')
+        item.style['stroke'] = 'black'
+        item.style['stroke-width'] = '2px'
+    }
+    function out(item){
+        console.log('mouse out')
+        item.style['stroke'] = 'none'
+    }
+  </script>
+</html>
