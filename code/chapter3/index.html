@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+    <link rel="stylesheet" href="./css/main2.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src='./images/logo.png' alt="">
+            <p>Urban Trajectory Visual Analytic System</p>
+        </div>    
+        <ul>
+            <li>Overview</li>
+            <li>Statistics</li>
+            <li>Dashboard</li>
+        </ul>
+    </div>
+    <div class="main">   
+        <div class="hero">
+            <div class="left">
+                <div class="lefttop">
+                    <div class="welcome">
+                        <img src="./images/logo.svg" alt="">
+                        <p>Welcome</p>
+                    </div>
+                    <div class="usernu">
+                        <p>User Number</p>
+                        <p id="usernu">203111</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <i class="material-icons">female</i>
+                            <span>
+                                <p>Female</p>
+                                <p id="femalenum">190111</p>
+                            </span>
+                        </li>
+                        <li>
+                            <i class="material-icons">male</i>
+                            <span>
+                                <p>Male</p>
+                                <p id="malenum">13000</p>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="leftbottom">
+                    <svg id="circlediagram">
+                        <!-- <rect x=10 y = 10 width="100" height="100" style="fill:white"></rect> -->
+                        <circle id='femalec' cx="30" cy="30" r="30" style="fill:purple"></circle>
+                        <circle id='malec' cx="130" cy="30" r="30" style="fill:blue"></circle>
+                    </svg>
+                </div>
+            </div>
+            <div class="right">
+                <div id="mapview">
+                </div>
+            </div>
+        </div>     
+        <div class="foot">
+            <div id="timeline">3</div>
+        </div>
+    </div>
+</body>
+
+<script>
+    setInterval(function(){
+        var sum = +(document.getElementById('usernu').innerText) + Math.floor(Math.random() * 1e2)
+        var fn = Math.floor(sum * Math.random())
+        var mn = sum - fn;
+        document.getElementById('usernu').innerText = sum
+        document.getElementById('femalenum').innerText = fn
+        document.getElementById('malenum').innerText = mn
+
+        //update circle
+        var mysvg = document.getElementById('circlediagram')
+        var rect = mysvg.getBoundingClientRect()
+
+        var r1 = (fn/sum) * rect.height * 0.25
+        var r2 = (mn/sum) * rect.height * 0.25
+
+        var cxy1 = [rect.width * 0.25, rect.height * 0.5]
+        var cxy2 = [rect.width * 0.75, rect.height * 0.5]
+
+        // console.log('cxy1', cxy1, r1)
+        
+        document.getElementById('femalec').setAttribute('cx', cxy1[0])
+        document.getElementById('femalec').setAttribute('cy', cxy1[1])
+        document.getElementById('femalec').setAttribute('r', r1)
+
+        document.getElementById('malec').setAttribute('cx', cxy2[0])
+        document.getElementById('malec').setAttribute('cy', cxy2[1])
+        document.getElementById('malec').setAttribute('r', r2)
+
+
+    }, 1000)
+   
+</script>
+</html>
